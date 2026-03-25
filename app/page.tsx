@@ -1,65 +1,261 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Heart, Users, Globe, Shield, BookOpen, Leaf } from "lucide-react";
+import CTABanner from "@/components/CTABanner";
+import SectionLabel from "@/components/SectionLabel";
 
-export default function Home() {
+const programs = [
+  {
+    icon: <Heart size={28} className="text-[#1d2130]" />,
+    title: "Healing, Peace-Building & Reconciliation",
+    desc: "Facilitating genuine healing through Mental Health and Psycho-social Support projects, empowering influential leaders and community members.",
+  },
+  {
+    icon: <Shield size={28} className="text-[#1d2130]" />,
+    title: "Abundant Leadership Development",
+    desc: "Equipping communities with servant leaders who promote unity, innovate economic opportunities, and fight corruption.",
+  },
+  {
+    icon: <Leaf size={28} className="text-[#1d2130]" />,
+    title: "Integral Community Development",
+    desc: "Empowering community members as assets and resources of their own communities through holistic development approaches.",
+  },
+  {
+    icon: <BookOpen size={28} className="text-[#1d2130]" />,
+    title: "Promoting Resilience Among Youth",
+    desc: "Preventing delinquency, addressing substance abuse, and creating reintegration pathways for vulnerable young people.",
+  },
+];
+
+const stats = [
+  { value: "3,950+", label: "People Empowered" },
+  { value: "2M+", label: "People Impacted" },
+  { value: "4+", label: "Areas Reached" },
+  { value: "6+", label: "Partner Organizations" },
+  { value: "2011", label: "Year Founded" },
+];
+
+const partners = ["CPA", "IICBS", "Rucher", "MICAH", "PDD"];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="pt-[67px]">
+      {/* HERO */}
+      <section
+        className="relative min-h-[735px] flex flex-col justify-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 py-24">
+          <h1 className="text-5xl lg:text-[64px] font-bold text-white leading-tight max-w-[640px] mb-6">
+            Touching Hearts<br />Transforming Nations
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-white/80 text-xl mb-4 max-w-xl">
+            Impacting Hearts — Heads — Hands
           </p>
+          <blockquote className="text-white/60 text-sm italic max-w-lg mb-8 leading-relaxed">
+            "You will be called Repairer of Broken Walls, Restorer of Streets
+            with Dwellings." — Isaiah 58:12
+          </blockquote>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/programs"
+              className="flex items-center gap-2 px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors"
+            >
+              Our Programs <ArrowRight size={18} />
+            </Link>
+            <Link
+              href="/donate"
+              className="flex items-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-medium rounded hover:bg-white/30 transition-colors border border-white/30"
+            >
+              Donate Now
+            </Link>
+          </div>
+          <div className="mt-16 flex flex-wrap gap-8 border-t border-white/20 pt-8">
+            <span className="text-white font-medium">3,950+ People Empowered</span>
+            <span className="text-white/40 hidden sm:block">|</span>
+            <span className="text-white font-medium">4+ Regions in North Kivu</span>
+            <span className="text-white/40 hidden sm:block">|</span>
+            <span className="text-white font-medium">6+ Partner Organizations</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* MISSION & VISION */}
+      <section className="py-24">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <SectionLabel text="Who We Are" />
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-6 max-w-[560px]">
+                Restoring bridges within and between communities
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-bold text-[#1d2130] mb-2">Our Vision</h3>
+                  <p className="text-[#525560] leading-relaxed">
+                    To see healed, reconciled, and prosperous communities living
+                    in peace in the DRC and other regions of Africa affected
+                    through violence.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-[#1d2130] mb-2">Our Mission</h3>
+                  <p className="text-[#525560] leading-relaxed">
+                    To rebuild bridges within and between affected communities
+                    through integral community-based approaches fostering
+                    inclusive cooperation, capacity building for sustainable
+                    healing, peace building, and development.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/about"
+                className="mt-8 inline-flex items-center gap-2 px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors"
+              >
+                Learn More About Us <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div
+              className="w-full aspect-[4/5] rounded-[20px] overflow-hidden"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* PROGRAMS */}
+      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div className="lg:sticky lg:top-24">
+              <SectionLabel text="What We Do" />
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-4">
+                Four programs transforming communities
+              </h2>
+              <p className="text-[#525560] leading-relaxed">
+                Since 2011, ARBI has run comprehensive initiatives designed to
+                heal, empower, and transform communities across North Kivu, DRC.
+              </p>
+              <Link
+                href="/programs"
+                className="mt-8 inline-flex items-center gap-2 px-8 py-4 bg-[#1d2130] text-white font-medium rounded hover:bg-[#2d3347] transition-colors"
+              >
+                View All Programs <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div>
+              {programs.map((p, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-5 py-7 border-b border-[#1d2130]/10"
+                >
+                  <div className="mt-1 shrink-0 p-2 bg-white rounded-lg">{p.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#1d2130] mb-1">{p.title}</h3>
+                    <p className="text-[#525560] text-sm leading-relaxed">{p.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IMPACT STATS */}
+      <section className="py-24 bg-black">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-[48px] font-bold text-white leading-tight mb-6">
+                Our impact across North Kivu
+              </h2>
+              <p className="text-white/60 text-base leading-relaxed">
+                Since our founding in 2011, we have worked tirelessly to bring
+                healing and peace to communities torn apart by violence in
+                Eastern DRC.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center">
+                  <div className="text-4xl font-bold text-[#f2c94c] mb-2">{s.value}</div>
+                  <div className="text-white/70 text-sm">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHERE WE WORK TEASER */}
+      <section className="py-24">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="text-center mb-16">
+            <SectionLabel text="Our Reach" center />
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto">
+              Making a difference across Northern Kivu
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { city: "Goma", role: "Headquarters & main operational center" },
+              { city: "Rutshuru", role: "Community development & peace-building" },
+              { city: "Masisi", role: "Psychosocial support & advocacy" },
+              { city: "Walikale", role: "Environmental protection & community health" },
+              { city: "Beni", role: "Relief operations & community empowerment" },
+            ].map((loc) => (
+              <div
+                key={loc.city}
+                className="flex items-start gap-4 p-6 rounded-[20px] bg-[#fcedc6]"
+              >
+                <Globe size={22} className="text-[#1d2130] shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-bold text-[#1d2130] text-lg">{loc.city}</div>
+                  <div className="text-[#525560] text-sm mt-1">{loc.role}</div>
+                </div>
+              </div>
+            ))}
+            <Link
+              href="/where-we-work"
+              className="flex items-center justify-center gap-2 p-6 rounded-[20px] border-2 border-dashed border-[#1d2130]/30 text-[#1d2130] font-medium hover:bg-[#fcedc6] transition-colors"
+            >
+              View All Locations <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA BANNER */}
+      <CTABanner />
+
+      {/* PARTNERS */}
+      <section className="py-16 border-t border-[#e5e5e5]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-8">
+            <span className="text-sm font-medium tracking-[2px] text-[#525560] uppercase whitespace-nowrap">
+              Our Partners
+            </span>
+            <div className="w-full h-px bg-[#e5e5e5] hidden sm:block" />
+            <div className="flex flex-wrap justify-center sm:justify-end gap-10">
+              {partners.map((p) => (
+                <span key={p} className="text-lg font-bold text-[#1d2130]/60 tracking-wide">
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
