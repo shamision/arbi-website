@@ -1,6 +1,6 @@
 import CTABanner from "@/components/CTABanner";
 import SectionLabel from "@/components/SectionLabel";
-import { MapPin, Users } from "lucide-react";
+import DRCMapClient from "@/components/DRCMapClient";
 
 const locations = [
   {
@@ -47,7 +47,7 @@ export default function WhereWeWorkPage() {
         className="relative min-h-[400px] flex flex-col justify-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&auto=format&fit=crop')",
+            "url('/8.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -70,7 +70,7 @@ export default function WhereWeWorkPage() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="text-center mb-16">
             <SectionLabel text="Operational Areas" center />
-            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-xl mx-auto">
               Five areas of active operations
             </h2>
           </div>
@@ -78,16 +78,11 @@ export default function WhereWeWorkPage() {
             {locations.map((loc, i) => (
               <div
                 key={i}
-                className="p-8 rounded-[20px] border border-[#e5e5e5] hover:border-[#f2c94c] hover:shadow-md transition-all"
+                className="p-8 rounded-[20px] border border-[#e5e5e5] hover:border-[#4845A5] hover:shadow-md transition-all"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-[#fcedc6] rounded-lg">
-                    <MapPin size={20} className="text-[#1d2130]" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#1d2130] text-lg">{loc.city}</div>
-                    <div className="text-[#f2c94c] text-xs font-bold uppercase tracking-wide">{loc.role}</div>
-                  </div>
+                <div className="mb-4">
+                  <div className="font-bold text-[#17153B] text-lg">{loc.city}</div>
+                  <div className="text-[#4845A5] text-xs font-bold uppercase tracking-wide mt-0.5">{loc.role}</div>
                 </div>
                 <p className="text-[#525560] text-sm leading-relaxed">{loc.desc}</p>
               </div>
@@ -97,12 +92,12 @@ export default function WhereWeWorkPage() {
       </section>
 
       {/* TARGET GROUPS */}
-      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <SectionLabel text="Who We Serve" />
-              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-6">
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight mb-6">
                 Reaching the most vulnerable communities
               </h2>
               <p className="text-[#525560] leading-relaxed">
@@ -115,13 +110,10 @@ export default function WhereWeWorkPage() {
               {targetGroups.map((tg, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-4 p-5 bg-white rounded-[16px]"
+                  className="p-5 bg-white rounded-[16px]"
                 >
-                  <div className="p-2 bg-[#fcedc6] rounded-lg shrink-0">
-                    <Users size={18} className="text-[#1d2130]" />
-                  </div>
                   <div>
-                    <div className="font-bold text-[#1d2130] text-base">{tg.group}</div>
+                    <div className="font-bold text-[#17153B] text-base">{tg.group}</div>
                     <div className="text-[#525560] text-sm mt-0.5">{tg.desc}</div>
                   </div>
                 </div>
@@ -131,20 +123,18 @@ export default function WhereWeWorkPage() {
         </div>
       </section>
 
-      {/* MAP PLACEHOLDER */}
-      <section
-        className="relative h-[400px]"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1600&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-[#1d2130]/40 flex items-center justify-center">
-          <div className="text-center text-white">
-            <p className="text-lg font-bold">North Kivu Province, DRC</p>
-            <p className="text-white/70 text-sm mt-1">Democratic Republic of Congo</p>
+      {/* MAP */}
+      <section className="py-16">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
+          <div className="text-center mb-8">
+            <SectionLabel text="Our Locations" center />
+            <h2 className="text-3xl lg:text-[40px] font-bold text-[#17153B] leading-tight">
+              Find us across Northern Kivu
+            </h2>
+            <p className="text-[#525560] mt-3 text-sm">Click a marker to see details about each location.</p>
+          </div>
+          <div className="rounded-[20px] overflow-hidden border border-[#e5e5e5] shadow-sm">
+            <DRCMapClient />
           </div>
         </div>
       </section>

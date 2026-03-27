@@ -2,9 +2,10 @@
 
 @theme inline {
   --font-sans: var(--font-roboto);
-  --color-navy: #1d2130;
-  --color-yellow: #f2c94c;
-  --color-yellow-bg: #fcedc6;
+  --color-navy: #17153B;
+  --color-purple-dark: #2D2A7A;
+  --color-purple-mid: #4845A5;
+  --color-purple-light: #C4B5D9;
   --color-body: #525560;
   --color-footer-bg: #0b0706;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -22,8 +23,15 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-black/10">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8 flex items-center justify-between h-[67px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1">
-          <span className="text-2xl font-bold text-[#1d2130] tracking-tight">ARBI</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/Logo ARBI PNG.png"
+            alt="ARBI Logo"
+            width={120}
+            height={48}
+            className="object-contain h-12 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -32,8 +40,8 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-base font-medium transition-colors hover:text-[#1d2130] ${
-                pathname === link.href ? "text-[#1d2130]" : "text-[#525560]"
+              className={`text-base font-medium transition-colors hover:text-[#17153B] ${
+                pathname === link.href ? "text-[#17153B]" : "text-[#525560]"
               }`}
             >
               {link.label}
@@ -44,14 +52,14 @@ export default function Navbar() {
         {/* Donate Button */}
         <Link
           href="/donate"
-          className="hidden lg:flex items-center px-8 py-3 bg-[#1d2130] text-white text-base font-medium rounded hover:bg-[#2d3347] transition-colors"
+          className="hidden lg:flex items-center px-8 py-3 bg-[#4845A5] text-white text-base font-medium rounded hover:bg-[#3838A0] transition-colors"
         >
           Donate
         </Link>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-[#1d2130]"
+          className="lg:hidden text-[#17153B]"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -61,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-[#1d2130] px-4 py-6 flex flex-col gap-4">
+        <div className="lg:hidden bg-[#17153B] px-4 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -75,7 +83,7 @@ export default function Navbar() {
           <Link
             href="/donate"
             onClick={() => setOpen(false)}
-            className="mt-2 text-center bg-[#f2c94c] text-[#1d2130] font-medium py-3 rounded"
+            className="mt-2 text-center bg-[#2D2A7A] text-white font-medium py-3 rounded"
           >
             Donate
           </Link>

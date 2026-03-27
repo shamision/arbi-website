@@ -1,10 +1,9 @@
 import CTABanner from "@/components/CTABanner";
 import SectionLabel from "@/components/SectionLabel";
-import { Heart, Shield, Leaf, BookOpen, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const programs = [
   {
-    icon: <Heart size={32} className="text-[#f2c94c]" />,
     title: "Healing, Peace-Building & Reconciliation",
     desc: "We facilitate genuine healing and reconciliation through empowering and working with influential leaders and community members through running Mental Health and Psycho-social Support projects and other related initiatives.",
     projects: [
@@ -16,10 +15,9 @@ const programs = [
       "Self-Care and Debriefing",
     ],
     image:
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop",
+      "/6.jpg",
   },
   {
-    icon: <Shield size={32} className="text-[#f2c94c]" />,
     title: "Abundant Leadership Development",
     desc: "Having witnessed what toxic leaders are capable of — destruction, corruption, exploitation and violence — providing communities with servant leaders having a heart for serving their fellows, promoting unity and innovating economic opportunities remains the most vital path to community transformation.",
     projects: [
@@ -28,10 +26,9 @@ const programs = [
       "Corruption fighting initiatives",
     ],
     image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop",
+      "/12.jpg",
   },
   {
-    icon: <Leaf size={32} className="text-[#f2c94c]" />,
     title: "Integral Community Development",
     desc: "We empower and strengthen community members as the assets, resources and strengths of their own communities, enabling them to take ownership of their development.",
     projects: [
@@ -42,10 +39,9 @@ const programs = [
       "Women and Children's rights (advocacy)",
     ],
     image:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&auto=format&fit=crop",
+      "/5.jpg",
   },
   {
-    icon: <BookOpen size={32} className="text-[#f2c94c]" />,
     title: "Promoting Resilience Among Youth (PRAY)",
     desc: "The risk factors related to delinquency among youth are compounded by drug abuse, poverty, political instability, urbanization, and dysfunctional family situations. Young people are at risk not just because they may turn to substance abuse or street living, but also because they are ambitious and in danger of being exploited.",
     projects: [
@@ -54,7 +50,7 @@ const programs = [
       "Develop and implement a sustainable mechanism for reintegration and follow-up of former delinquents",
     ],
     image:
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&auto=format&fit=crop",
+      "/2.jpg",
   },
 ];
 
@@ -66,7 +62,7 @@ export default function ProgramsPage() {
         className="relative min-h-[400px] flex flex-col justify-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1594882645126-14020914d58d?w=1600&auto=format&fit=crop')",
+            "url('/14.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -95,18 +91,17 @@ export default function ProgramsPage() {
               }`}
             >
               <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-[#1d2130] rounded-xl">{prog.icon}</div>
+                <div className="mb-6">
                   <span className="text-sm font-bold tracking-[2px] text-[#525560] uppercase">
                     Program {i + 1}
                   </span>
                 </div>
-                <h2 className="text-3xl lg:text-[40px] font-bold text-[#1d2130] leading-tight mb-4">
+                <h2 className="text-3xl lg:text-[40px] font-bold text-[#17153B] leading-tight mb-4">
                   {prog.title}
                 </h2>
                 <p className="text-[#525560] leading-relaxed mb-6">{prog.desc}</p>
                 <div>
-                  <p className="text-sm font-bold text-[#1d2130] uppercase tracking-[1px] mb-4">
+                  <p className="text-sm font-bold text-[#17153B] uppercase tracking-[1px] mb-4">
                     Key Projects
                   </p>
                   <ul className="space-y-2">
@@ -117,7 +112,7 @@ export default function ProgramsPage() {
                       >
                         <ChevronRight
                           size={16}
-                          className="text-[#f2c94c] shrink-0 mt-0.5"
+                          className="text-[#4845A5] shrink-0 mt-0.5"
                         />
                         {p}
                       </li>
@@ -126,7 +121,7 @@ export default function ProgramsPage() {
                 </div>
               </div>
               <div
-                className="w-full aspect-[4/3] rounded-[20px]"
+                className="w-full aspect-[4/3]"
                 style={{
                   backgroundImage: `url('${prog.image}')`,
                   backgroundSize: "cover",

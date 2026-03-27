@@ -6,10 +6,10 @@ export default function CTABanner() {
     <section className="py-24">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
         <div
-          className="relative rounded-[20px] overflow-hidden min-h-[384px] flex items-center justify-center text-center px-8 py-16"
+          className="relative overflow-hidden min-h-[384px] flex items-center justify-center text-center px-8 py-16"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&auto=format&fit=crop')",
+              "url('/8.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -22,7 +22,7 @@ export default function CTABanner() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/donate"
-                className="flex items-center gap-2 px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors"
+                className="flex items-center gap-2 px-8 py-4 bg-[#2D2A7A] text-white font-medium rounded hover:bg-[#1E1B5C] transition-colors"
               >
                 Donate Now <ArrowRight size={18} />
               </Link>

@@ -34,12 +34,12 @@ export default function AboutPage() {
   return (
     <main className="pt-[67px]">
       {/* HERO */}
-      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <SectionLabel text="Know About Us" />
-              <h1 className="text-5xl lg:text-[56px] font-bold text-[#1d2130] leading-tight mb-6">
+              <h1 className="text-5xl lg:text-[56px] font-bold text-[#17153B] leading-tight mb-6">
                 We are a Christian NGO dedicated to healing communities
               </h1>
               <p className="text-[#525560] text-lg leading-relaxed">
@@ -49,10 +49,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div
-              className="w-full aspect-video rounded-[20px]"
+              className="w-full aspect-video"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&auto=format&fit=crop')",
+                  "url('/3.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -66,17 +66,17 @@ export default function AboutPage() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div
-              className="w-full aspect-[4/3] rounded-[20px]"
+              className="w-full aspect-[4/3]"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1594882645126-14020914d58d?w=800&auto=format&fit=crop')",
+                  "url('/1.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
             <div>
               <SectionLabel text="Our Background" />
-              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-6">
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight mb-6">
                 Founded in response to violence in Eastern DRC
               </h2>
               <p className="text-[#525560] leading-relaxed mb-4">
@@ -102,26 +102,26 @@ export default function AboutPage() {
       </section>
 
       {/* VISION & MISSION */}
-      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="text-center mb-16">
             <SectionLabel text="Our Purpose" center />
-            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-2xl mx-auto">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-2xl mx-auto">
               Guided by vision, driven by mission
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-10 rounded-[20px]">
-              <div className="w-12 h-1 bg-[#f2c94c] mb-6" />
-              <h3 className="text-2xl font-bold text-[#1d2130] mb-4">Our Vision</h3>
+            <div className="bg-white p-10">
+
+              <h3 className="text-2xl font-bold text-[#17153B] mb-4">Our Vision</h3>
               <p className="text-[#525560] leading-relaxed">
                 To see healed, reconciled, and prosperous communities living in
                 peace in the DRC and other regions of Africa affected through
                 violence.
               </p>
             </div>
-            <div className="bg-[#1d2130] p-10 rounded-[20px]">
-              <div className="w-12 h-1 bg-[#f2c94c] mb-6" />
+            <div className="bg-[#17153B] p-10">
+
               <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-white/70 leading-relaxed">
                 To rebuild bridges within and between affected communities
@@ -139,7 +139,7 @@ export default function AboutPage() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="text-center mb-16">
             <SectionLabel text="What We Stand For" center />
-            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-xl mx-auto">
               Our core values guide everything we do
             </h2>
           </div>
@@ -147,10 +147,9 @@ export default function AboutPage() {
             {values.map((v, i) => (
               <div
                 key={i}
-                className="p-8 rounded-[20px] border border-[#e5e5e5] hover:border-[#f2c94c] hover:bg-[#fcedc6]/30 transition-colors"
+                className="p-8 border border-[#e5e5e5] hover:border-[#4845A5] hover:bg-[#C4B5D9]/30 transition-colors"
               >
-                <div className="w-8 h-1 bg-[#f2c94c] mb-5" />
-                <h3 className="text-xl font-bold text-[#1d2130] mb-3">{v.title}</h3>
+                <h3 className="text-xl font-bold text-[#17153B] mb-3">{v.title}</h3>
                 <p className="text-[#525560] text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -161,7 +160,7 @@ export default function AboutPage() {
       {/* MOTTO */}
       <section className="py-24 bg-black">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8 text-center">
-          <p className="text-[#f2c94c] text-sm font-bold tracking-[4px] uppercase mb-6">
+          <p className="text-[#4845A5] text-sm font-bold tracking-[4px] uppercase mb-6">
             Our Motto
           </p>
           <h2 className="text-4xl lg:text-[56px] font-bold text-white leading-tight max-w-3xl mx-auto">
@@ -173,7 +172,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/programs"
-            className="mt-10 inline-flex items-center gap-2 px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors"
+            className="mt-10 inline-flex items-center gap-2 px-8 py-4 bg-[#2D2A7A] text-white font-medium rounded hover:bg-[#1E1B5C] transition-colors"
           >
             Explore Our Programs <ArrowRight size={18} />
           </Link>

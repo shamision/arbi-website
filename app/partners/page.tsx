@@ -1,33 +1,50 @@
 import CTABanner from "@/components/CTABanner";
 import SectionLabel from "@/components/SectionLabel";
 import Link from "next/link";
-import { ArrowRight, Handshake } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const partners = [
   {
     name: "CPA",
     fullName: "Community Partners Alliance",
+    logo: "/cpa.jpeg",
     desc: "Supporting community development and peace-building across North Kivu.",
   },
   {
     name: "IICBS",
     fullName: "International Institute for Community-Based Support",
+    logo: "/LogoDiapositive.svg",
     desc: "Providing expertise in psychosocial support and conflict transformation.",
   },
   {
     name: "Rucher",
     fullName: "Rucher Organization",
+    logo: "/rucher.png",
     desc: "Collaborating on economic empowerment and livelihoods programs.",
   },
   {
     name: "MICAH",
     fullName: "MICAH Global Network",
+    logo: "/micah.jpg",
     desc: "Faith-based partner advancing integral mission and holistic development.",
   },
   {
     name: "PDD",
     fullName: "Program for Durable Development",
+    logo: "/pdd.jpeg",
     desc: "Working together on sustainable development and environmental initiatives.",
+  },
+  {
+    name: "Prison Fellowship",
+    fullName: "Prison Fellowship",
+    logo: "/prisonfellowship.png",
+    desc: "Partnering on reconciliation and reintegration programs for ex-combatants.",
+  },
+  {
+    name: "Way of Peace",
+    fullName: "Way of Peace",
+    logo: "/wayofpeace.webp",
+    desc: "Collaborating on peace education and community healing initiatives.",
   },
 ];
 
@@ -39,7 +56,7 @@ export default function PartnersPage() {
         className="relative min-h-[400px] flex flex-col justify-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1600&auto=format&fit=crop')",
+            "url('/3.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -62,7 +79,7 @@ export default function PartnersPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <SectionLabel text="Our Partners" />
-              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-6">
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight mb-6">
                 Building a network of change-makers
               </h2>
               <p className="text-[#525560] leading-relaxed mb-4">
@@ -80,11 +97,13 @@ export default function PartnersPage() {
               {partners.slice(0, 4).map((p) => (
                 <div
                   key={p.name}
-                  className="aspect-square flex items-center justify-center bg-[#fcedc6] rounded-[20px]"
+                  className="aspect-square flex items-center justify-center bg-white rounded-[20px] border border-[#e5e5e5] p-6"
                 >
-                  <span className="text-2xl font-bold text-[#1d2130]/70 tracking-widest">
-                    {p.name}
-                  </span>
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="max-h-20 max-w-full object-contain"
+                  />
                 </div>
               ))}
             </div>
@@ -93,11 +112,11 @@ export default function PartnersPage() {
       </section>
 
       {/* PARTNER CARDS */}
-      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="text-center mb-16">
             <SectionLabel text="All Partners" center />
-            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-xl mx-auto">
               Our partner organizations
             </h2>
           </div>
@@ -107,15 +126,14 @@ export default function PartnersPage() {
                 key={p.name}
                 className="bg-white p-8 rounded-[20px] hover:shadow-md transition-shadow"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-2 bg-[#fcedc6] rounded-lg">
-                    <Handshake size={20} className="text-[#1d2130]" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-[#1d2130]">{p.name}</div>
-                  </div>
+                <div className="h-20 flex items-center justify-center mb-4 bg-[#C4B5D9] rounded-xl p-3">
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
-                <p className="text-sm font-medium text-[#f2c94c] mb-3">{p.fullName}</p>
+                <p className="text-sm font-medium text-[#4845A5] mb-1">{p.fullName}</p>
                 <p className="text-[#525560] text-sm leading-relaxed">{p.desc}</p>
               </div>
             ))}
@@ -127,7 +145,7 @@ export default function PartnersPage() {
       <section className="py-24">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8 text-center">
           <SectionLabel text="Join Us" center />
-          <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto mt-2 mb-6">
+          <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-xl mx-auto mt-2 mb-6">
             Interested in Partnership?
           </h2>
           <p className="text-[#525560] text-lg max-w-xl mx-auto mb-10">
@@ -137,7 +155,7 @@ export default function PartnersPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#1d2130] text-white font-medium rounded hover:bg-[#2d3347] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#17153B] text-white font-medium rounded hover:bg-[#2d3347] transition-colors"
           >
             Contact Us <ArrowRight size={18} />
           </Link>

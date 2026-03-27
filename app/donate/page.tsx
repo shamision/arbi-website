@@ -7,17 +7,17 @@ const impactLevels = [
   {
     amount: "$50",
     impact: "Provides essential supplies for a family in need",
-    icon: <Heart size={24} className="text-[#f2c94c]" />,
+    icon: <Heart size={24} className="text-[#4845A5]" />,
   },
   {
     amount: "$100",
     impact: "Supports a peace-building workshop for 10 participants",
-    icon: <Users size={24} className="text-[#f2c94c]" />,
+    icon: <Users size={24} className="text-[#4845A5]" />,
   },
   {
     amount: "$500",
     impact: "Funds a full community development project",
-    icon: <Globe size={24} className="text-[#f2c94c]" />,
+    icon: <Globe size={24} className="text-[#4845A5]" />,
   },
 ];
 
@@ -25,12 +25,12 @@ export default function DonatePage() {
   return (
     <main className="pt-[67px]">
       {/* HERO */}
-      <section className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <SectionLabel text="Donate" />
-              <h1 className="text-5xl lg:text-[56px] font-bold text-[#1d2130] leading-tight mb-6">
+              <h1 className="text-5xl lg:text-[56px] font-bold text-[#17153B] leading-tight mb-6">
                 Making a donation for our communities
               </h1>
               <p className="text-[#525560] text-lg leading-relaxed mb-8">
@@ -39,7 +39,7 @@ export default function DonatePage() {
               </p>
               <a
                 href="#donate-now"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#2D2A7A] text-white font-medium rounded hover:bg-[#1E1B5C] transition-colors"
               >
                 Donate Now <ArrowRight size={18} />
               </a>
@@ -48,7 +48,7 @@ export default function DonatePage() {
               className="w-full aspect-[4/3] rounded-[20px]"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&auto=format&fit=crop')",
+                  "url('/9.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -62,7 +62,7 @@ export default function DonatePage() {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="text-center mb-16">
             <SectionLabel text="Your Impact" center />
-            <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight max-w-xl mx-auto">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight max-w-xl mx-auto">
               See how your donation makes a difference
             </h2>
           </div>
@@ -70,10 +70,10 @@ export default function DonatePage() {
             {impactLevels.map((level) => (
               <div
                 key={level.amount}
-                className="p-10 rounded-[20px] bg-[#fcedc6] text-center"
+                className="p-10 rounded-[20px] bg-[#C4B5D9] text-center"
               >
                 <div className="flex justify-center mb-4">{level.icon}</div>
-                <div className="text-4xl font-bold text-[#1d2130] mb-4">
+                <div className="text-4xl font-bold text-[#17153B] mb-4">
                   {level.amount}
                 </div>
                 <p className="text-[#525560] leading-relaxed">{level.impact}</p>
@@ -84,12 +84,12 @@ export default function DonatePage() {
       </section>
 
       {/* HOW TO CONTRIBUTE */}
-      <section id="donate-now" className="py-24" style={{ backgroundColor: "#fcedc6" }}>
+      <section id="donate-now" className="py-24" style={{ backgroundColor: "#C4B5D9" }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <SectionLabel text="How to Give" />
-              <h2 className="text-4xl lg:text-[48px] font-bold text-[#1d2130] leading-tight mb-4">
+              <h2 className="text-4xl lg:text-[48px] font-bold text-[#17153B] leading-tight mb-4">
                 How you can contribute to our work
               </h2>
               <p className="text-[#525560] leading-relaxed">
@@ -101,22 +101,22 @@ export default function DonatePage() {
             <div className="space-y-6">
               {/* Online Donation */}
               <div className="bg-white p-8 rounded-[20px]">
-                <div className="w-8 h-1 bg-[#f2c94c] mb-4" />
-                <h3 className="text-xl font-bold text-[#1d2130] mb-2">
+                <div className="w-8 h-1 bg-[#4845A5] mb-4" />
+                <h3 className="text-xl font-bold text-[#17153B] mb-2">
                   Online Donation
                 </h3>
                 <p className="text-[#525560] text-sm leading-relaxed mb-6">
                   Make a secure online donation using your credit card or
                   PayPal account. Fast, safe, and immediate.
                 </p>
-                <button className="px-8 py-3 bg-[#1d2130] text-white font-medium rounded hover:bg-[#2d3347] transition-colors">
+                <button className="px-8 py-3 bg-[#17153B] text-white font-medium rounded hover:bg-[#2d3347] transition-colors">
                   Donate Online
                 </button>
               </div>
               {/* Bank Transfer */}
               <div className="bg-white p-8 rounded-[20px]">
-                <div className="w-8 h-1 bg-[#f2c94c] mb-4" />
-                <h3 className="text-xl font-bold text-[#1d2130] mb-2">
+                <div className="w-8 h-1 bg-[#4845A5] mb-4" />
+                <h3 className="text-xl font-bold text-[#17153B] mb-2">
                   Bank Transfer
                 </h3>
                 <p className="text-[#525560] text-sm leading-relaxed mb-6">
@@ -125,7 +125,7 @@ export default function DonatePage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#1d2130] text-[#1d2130] font-medium rounded hover:bg-[#fcedc6] transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#17153B] text-[#17153B] font-medium rounded hover:bg-[#C4B5D9] transition-colors"
                 >
                   Get Bank Details <ArrowRight size={16} />
                 </Link>
@@ -147,7 +147,7 @@ export default function DonatePage() {
             change in the DRC. Consistent support enables us to plan and
             deliver programs more effectively.
           </p>
-          <button className="px-8 py-4 bg-[#f2c94c] text-[#1d2130] font-medium rounded hover:bg-[#e0b83c] transition-colors">
+          <button className="px-8 py-4 bg-[#2D2A7A] text-white font-medium rounded hover:bg-[#1E1B5C] transition-colors">
             Start Monthly Giving
           </button>
         </div>
@@ -160,7 +160,7 @@ export default function DonatePage() {
             <div className="grid lg:grid-cols-3 gap-12">
               <div>
                 <SectionLabel text="Transparency" />
-                <h2 className="text-3xl lg:text-[40px] font-bold text-[#1d2130] leading-tight">
+                <h2 className="text-3xl lg:text-[40px] font-bold text-[#17153B] leading-tight">
                   How we use your donation
                 </h2>
               </div>
