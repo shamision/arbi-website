@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import "leaflet/dist/leaflet.css";
 
 const locations = [
   {
@@ -49,8 +50,6 @@ export default function DRCMap() {
       if (aborted || !mapRef.current) return;
       // Guard against StrictMode double-init
       if ((mapRef.current as any)._leaflet_id) return;
-
-      import("leaflet/dist/leaflet.css");
 
       const map = L.map(mapRef.current, {
         center: [-0.8, 29.0],
